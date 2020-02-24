@@ -1,0 +1,17 @@
+{
+	"sonarqube": {
+		"tool": {
+			"name": "sonar"
+		},
+		"users": [{
+			"user1": {
+				"qualitygate": "50"
+
+			},
+			"user2": {
+				"qualitygate": "60"
+
+			}
+		}]
+	}
+}
