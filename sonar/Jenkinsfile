@@ -1,0 +1,11 @@
+@Library('shlib')_
+pipeline{
+  agent any
+  stages{
+  stage("opa"){
+            steps{
+            policy.groovy
+            }
+            }
+            }
+            }
