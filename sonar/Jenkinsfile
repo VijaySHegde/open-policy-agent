@@ -1,11 +1,18 @@
 @Library('shlib')_
 pipeline{
-  agent any
-  stages{
-  stage("opa"){
+    agent any
+    stages{
+        stage('git clone'){
             steps{
-            policy.groovy
+                sh "rm -rf open-policy-agent"
+                sh "git https://github.com/VijaySHegde/open-policy-agent.git"
             }
+        }
+        stage('opatest'){
+            steps{
+            sonar-policy()
             }
-            }
-            }
+        }
+        
+    }
+}
